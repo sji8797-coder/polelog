@@ -1,0 +1,52 @@
+/* 폴로그 정책 페이지 공통 스타일 — 앱의 로즈·아이보리 톤 */
+:root {
+  --bg: #fcf6f1;
+  --card: #ffffff;
+  --text: #33282a;
+  --sub: #7a6a68;
+  --accent: #b2585b;
+  --soft: #f7e6e3;
+  --line: #efe2dc;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1b1516;
+    --card: #251d1e;
+    --text: #f4ecea;
+    --sub: #b8a9a6;
+    --accent: #e8a6a7;
+    --soft: #3a2829;
+    --line: #3a2e2e;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  line-height: 1.75;
+  font-size: 16px;
+  word-break: keep-all;
+}
+.wrap { max-width: 760px; margin: 0 auto; padding: 32px 20px 64px; }
+header { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
+header img { width: 56px; height: 56px; border-radius: 14px; box-shadow: 0 4px 14px rgba(178, 88, 91, 0.18); }
+header a { color: inherit; text-decoration: none; }
+.brand { font-family: "Nanum Myeongjo", serif; font-size: 24px; font-weight: 700; }
+.brand small { display: block; font-family: Georgia, serif; font-style: italic; font-weight: 400; font-size: 14px; color: var(--sub); }
+h1 { font-family: "Nanum Myeongjo", serif; font-size: 28px; line-height: 1.4; margin: 0 0 6px; }
+h2 { font-family: "Nanum Myeongjo", serif; font-size: 20px; margin: 36px 0 10px; padding-top: 8px; border-top: 1px solid var(--line); }
+.meta { color: var(--sub); font-size: 14px; margin-bottom: 20px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 22px 22px 8px; margin: 18px 0; }
+.note { background: var(--soft); border-radius: 14px; padding: 14px 16px; margin: 14px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 10px 0 16px; }
+th, td { text-align: left; vertical-align: top; padding: 9px 8px; border-bottom: 1px solid var(--line); }
+th { color: var(--sub); font-weight: 600; white-space: nowrap; }
+ul, ol { padding-left: 22px; }
+li { margin: 4px 0; }
+a { color: var(--accent); }
+.links a { display: block; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; margin: 10px 0; text-decoration: none; color: var(--text); font-weight: 600; }
+.links a span { display: block; color: var(--sub); font-weight: 400; font-size: 14px; }
+footer { margin-top: 48px; color: var(--sub); font-size: 13px; text-align: center; }
+@media (max-width: 480px) { th { white-space: normal; } }
